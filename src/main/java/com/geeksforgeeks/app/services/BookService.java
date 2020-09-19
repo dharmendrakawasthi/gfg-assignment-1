@@ -8,6 +8,6 @@ public interface BookService {
 
 	public List<Book> getAllBooks();
 	public Book addBook(Book book);
-	public List<Book> updateAuthor();	
+	public List<Book>  updateAuthorName(String fromName, String toName);	
 	public Integer deleteBooks();
 }

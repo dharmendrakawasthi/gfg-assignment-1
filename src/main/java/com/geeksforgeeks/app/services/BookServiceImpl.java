@@ -29,12 +29,12 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<Book> updateAuthor() {
-		return this.bookRepository.findByAuthorNameLike("Will%")
+	public List<Book> updateAuthorName(String fromName, String toName) {
+		return this.bookRepository.findByAuthorNameLike(fromName+"%")
 				.stream()
-				.filter(b -> b.getAuthorName().split(" ")[0].equals("Will"))
+				.filter(b -> b.getAuthorName().split(" ")[0].equals(fromName))
 				.map(book -> {
-					book.setAuthorName("Wilium" + " " + book.getAuthorName().split(" ")[1]);
+					book.setAuthorName(toName + " " + book.getAuthorName().split(" ")[1]);
 					return this.bookRepository.save(book);
 					}
 				)
