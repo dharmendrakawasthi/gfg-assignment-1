@@ -9,5 +9,4 @@ public class GfgAsignment1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(GfgAsignment1Application.class, args);
 	}
-
 }
