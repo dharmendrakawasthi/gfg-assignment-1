@@ -19,6 +19,8 @@ public class Book {
 	private Integer cost;
 	private Timestamp createdDate;
 
+	public Book() {}
+
 	public Book(String name, String authorName, Integer cost, Timestamp createdDate) {
 		this.name = name;
 		this.authorName = authorName;
@@ -59,7 +61,7 @@ public class Book {
 	}
 
 	public Date getCreatedDate() {
-		return new Date(createdDate.getTime());
+		return createdDate;
 	}
 
 	public void setCreatedDate(Timestamp createdDate) {
