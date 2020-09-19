@@ -8,5 +8,6 @@ public interface BookService {
 
 	public List<Book> getAllBooks();
 	public Book addBook(Book book);
-	public List<Book> updateAuthor();
+	public List<Book> updateAuthor();	
+	public Integer deleteBooks();
 }

@@ -30,7 +30,7 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public List<Book> updateAuthor() {
-		return this.bookRepository.findAll()
+		return this.bookRepository.findByAuthorNameLike("Will%")
 				.stream()
 				.filter(b -> b.getAuthorName().split(" ")[0].equals("Will"))
 				.map(book -> {
@@ -39,5 +39,10 @@ public class BookServiceImpl implements BookService {
 					}
 				)
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public Integer deleteBooks() {
+		return this.bookRepository.deleteBooks();
 	}
 }
