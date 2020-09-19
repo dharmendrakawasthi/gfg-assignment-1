@@ -4,6 +4,7 @@
 
 Entity Name that should be used throughout the project : Book
 
+```
 Book.java
 {
 	long id,
@@ -13,7 +14,7 @@ Book.java
 	Timestamp (data type you have find from the mapping of sql data types to java data       types)
 
 }
-
+```
 Note : The marking will be task wise, the more tasks you do, the better you score
 
 ## Task 1 : 
